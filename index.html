@@ -33,6 +33,8 @@ h1{font-family:var(--lyric);font-size:19px;font-weight:700;margin:0;letter-spaci
      border-radius:9px;padding:5px 10px;font-size:12px;cursor:pointer;font-family:var(--ui)}
 .icb.on{color:var(--tx);border-color:var(--acc);background:#2a2113}
 
+/* 禁用浏览器的双击放大（双指缩放不受影响）；必须排在 #roll/#lyr 的 touch-action:none 之前 */
+html,body,#app,#app *{touch-action:manipulation}
 /* ---- pitch ---- */
 #roll{flex:1 1 auto;min-height:120px;position:relative;background:var(--panel2);touch-action:none;
       border:1px solid var(--line);border-radius:12px;overflow:hidden}
